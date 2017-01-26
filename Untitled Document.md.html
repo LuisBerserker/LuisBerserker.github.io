@@ -1,11 +1,8 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
-<p>#Project Aurora</p>
-<p>In the beginning, we decided that we wanted to create some sort of 3D multiplayer game because we had never made a multiplayer game before and Luis had never made a 3D game before.</p>
-<p>We thought about what kind of game we could make and chose to try to make a game somewhat based on the social game “Werwolf”.</p>
-<p>It should have multiple competing teams with hidden roles and some system to make for an interesting fight where roles are slowly uncovered.</p>
-<p>At the moment, we mostly just have an “engine” that will later be the basis of all the models and dynamics we add to make a fully fleged game.</p>
-<p>While we are not quite sure if we will be able to actually finish the game, we decided that it is more important to overcome new technical challenges instead of spending a lot of time creating beautiful models and compelling textures - after all, this is a computer science, not an art class.</p>
-<p>##Project Structure</p>
+<h1>Project Aurora</h1>
+<p>In the beginning, we decided that we wanted to create some sort of 3D multiplayer game because we had never made a multiplayer game before and Luis had never made a 3D game before. We thought about what kind of game we could make and chose to try to make a game somewhat based on the social game “Werwolf”.
+It should have multiple competing teams with hidden roles and some system to make for an interesting fight where roles are slowly uncovered. At the moment, we mostly just have an “engine” that will later be the basis of all the models and dynamics we add to make a fully fleged game. While we are not quite sure if we will be able to actually finish the game, we decided that it is more important to overcome new technical challenges instead of spending a lot of time creating beautiful models and compelling textures - after all, this is a computer science, not an art class.</p>
+        <h2>Project structure</h2>
 <p>Because of the multiplayer aspect, we created multiple projects that work together:</p>
 <p><img src="pictures/project-structure.PNG" alt="Imagine a picture of a list of all the projects" title="If you count the projects, you will notice there are only 8..."></p>
 <p>The first folder (Client) contains everything that is only needed on the client-side:</p>
@@ -21,7 +18,7 @@
 <p>The Aurora.GameState contains the state of the game world, e. g. the position of all players. This project is compiled into a DLL (Dynamic Link Library) and then loaded into both the server and the client. This allows us to share the data structures for server and client. However, this still does not mean that the data is automatically synced: Server and Client need to send messages to each other in order to communicate any changes.</p>
 <p>Lastly, the TCP folder is responible for the low-level networking. The two projects are compiled into DLLs and used to communicate between server and client. They only contain functions to send messages to certain clients / the server and trigger events whenever a message is received. They are therefore very portable and could easily be used in other projects.</p>
 <p>Two projects are not shown in the list. One of them is a website experiment that doesn’t really contain anything and the other one contains the “aurora tools”. We wanted to use that e. g. to convert models files in a usable format, but so far, we always managed to find a solution out of the box.</p>
-<p>##Table of contents</p>
+<h2>Table of contents</h2>
 <ol>
 <li>
 <p><a href="#Networking">Networking</a><br>
